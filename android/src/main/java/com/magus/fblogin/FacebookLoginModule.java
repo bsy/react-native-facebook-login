@@ -79,7 +79,7 @@ public class FacebookLoginModule extends ReactContextBaseJavaModule implements A
                                                     WritableMap map = Arguments.createMap();
 
                                                     map.putString("token", loginResult.getAccessToken().getToken());
-                                                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+                                                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
                                                     map.putString("expiration", sdf.format(loginResult.getAccessToken().getExpires()));
 
                                                     //TODO: figure out a way to return profile as WriteableMap
